@@ -1,4 +1,4 @@
-const apiUrl = "http://jsonplaceholder.typicode.com";
+const apiUrl = "https://jsonplaceholder.typicode.com";
 
 const get = async entity => {
   const response = await fetch(`${apiUrl}/${entity}`, { method: "GET" });
