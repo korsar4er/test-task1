@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Главная</h1>
+    <div class="home__nav">
+      <HistoryMenu />
+    </div>
+    <PostColumns />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HistoryMenu from "@/components/HistoryMenu.vue";
+import PostColumns from "@/components/PostColumns.vue";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  components: { HistoryMenu, PostColumns }
+};
 </script>
+
+<style scoped>
+.home__nav {
+  padding: 5px;
+  text-align: center;
+  margin-top: 5px;
+}
+</style>

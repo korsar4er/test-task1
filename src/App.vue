@@ -1,32 +1,47 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div>
+    <div class="wrapper">
+      <Header />
+      <router-view />
     </div>
-    <router-view/>
+    <MessageBox />
   </div>
 </template>
 
+<script>
+import Header from "@/components/Header";
+import MessageBox from "@/components/MessageBox.vue";
+
+export default {
+  components: {
+    Header,
+    MessageBox
+  }
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
 }
-
-#nav {
-  padding: 30px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+body {
+  margin: 0.5em 0;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+h1 {
+  margin: 0.3em 0;
+  font-size: 1.5rem;
+}
+.wrapper {
+  max-width: 1200px;
+  min-height: 98vh;
+  margin: 0 auto;
+  background-color: #eee;
+  padding: 5px;
 }
 </style>
